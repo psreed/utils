@@ -5,8 +5,8 @@
 # @example
 #   include utils::rhel_subscribe
 class utils::rhel_subscribe {
-  $rhel_user=lookup('rhel_subscription::user', '')
-  $rhel_pswd=lookup('rhel_subscription::password', '')
+  $rhel_user=lookup('rhel_subscription::user', undef, undef, '')
+  $rhel_pswd=lookup('rhel_subscription::password', undef, undef, '')
   unless (($rhel_user == '') or ($rhel_pswd == '')) {
     #exec { "/usr/sbin/subscription-manager register --username=${rhel_user} --auto-attach --password='${rhel_pswd}'":
     Notify { "/usr/sbin/subscription-manager register --username=${rhel_user} --auto-attach --password='${rhel_pswd}'": }
