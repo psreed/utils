@@ -8,4 +8,3 @@ if [[ -f /etc/redhat-release && $(cat /etc/redhat-release) == *"Enterprise Linux
     IFS=$OIFS
     echo "{\"rhel_sub_info\": { \"status\": \"${STATUS}\", \"info\": \"${LIST}\" } }"
 fi
-
