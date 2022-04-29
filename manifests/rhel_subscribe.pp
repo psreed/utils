@@ -6,7 +6,8 @@
 #   include utils::rhel_subscribe
 class utils::rhel_subscribe {
   if (
-    $facts['os']['distro']['id']!=undef
+    $facts['os']['distro']!=undef
+    and $facts['os']['distro']['id']!=undef
     and $facts['os']['distro']['id']=='RedHatEnterpise'
     and $facts['rhel_sub_info']['status']!=undef
     and $facts['rhel_sub_info']['status']!='Subscribed'
