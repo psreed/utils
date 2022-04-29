@@ -5,7 +5,7 @@
 # @example
 #   include utils::rhel_subscribe
 class utils::rhel_subscribe {
-  notice('test')
+  Notify { 'Test': }
 
 
 }
