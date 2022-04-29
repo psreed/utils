@@ -9,6 +9,7 @@ class utils::rhel_subscribe {
     $facts['os']['distro']!=undef
     and $facts['os']['distro']['id']!=undef
     and $facts['os']['distro']['id']=='RedHatEnterprise'
+    and $facts['rhel_sub_info']!=undef
     and $facts['rhel_sub_info']['status']!=undef
     and $facts['rhel_sub_info']['status']!='Subscribed'
     and $facts['rhel_sub_info']['status']!=''
