@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #Add fact for RHEL subscription info/status
 
 if [[ -f /etc/redhat-release && $(cat /etc/redhat-release) == *"Enterprise Linux"* ]]; then   
