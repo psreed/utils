@@ -1,5 +1,5 @@
 # Function creates a sane default password
-Puppet::Functions.create_function(:sane_default_password) do
+Puppet::Functions.create_function(:'utils::sane_default_password') do
     dispatch :func do
       optional_param 'Integer', :characters
       return_type 'String'
