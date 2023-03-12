@@ -1,7 +1,7 @@
 # intended to manage a file on PE infra servers to use with 
 # Puppet's generate command to create sane default passwords
-class utils::sane_default_password_generator {
-  file { '/opt/puppetlabs/sane_password_generate.sh':
+class utils::generate_sane_default_password {
+  file { '/opt/puppetlabs/generate_sane_default_password.sh':
     ensure  => file,
     owner   => 'pe-puppet',
     group   => 'pe-puppet',
