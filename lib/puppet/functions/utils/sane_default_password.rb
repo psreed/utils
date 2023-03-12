@@ -5,7 +5,7 @@ Puppet::Functions.create_function(:'utils::sane_default_password') do
       return_type 'String'
     end
     def func(characters = 32)
-      cmd = "/opt/puppetlabs/sane_default_password_generator.sh #{characters}"
+      cmd = "/opt/puppetlabs/sane_default_password_generate.sh #{characters}"
       code = %x[ #{cmd} ]
       code
      end
