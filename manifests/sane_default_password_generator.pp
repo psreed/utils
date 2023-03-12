@@ -3,8 +3,8 @@
 class utils::sane_default_password_generator {
   file { '/opt/puppetlabs/sane_password_generate.sh':
     ensure  => file,
-    owner   => 'pe_puppet',
-    group   => 'pe_puppet',
+    owner   => 'pe-puppet',
+    group   => 'pe-puppet',
     mode    => '0755',
     content => '#!/bin/sh
 LENGTH=$1
