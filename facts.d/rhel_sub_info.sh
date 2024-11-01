@@ -9,7 +9,7 @@ if [[ -f /etc/redhat-release && $(cat /etc/redhat-release) == *"Enterprise Linux
     if [ $? == 0 ]; then
             echo "{\"rhel_sub_info\": { \"status\": \"Subscribed\", \"info\": \"Simple Content Access \(SCA\) Enabled\", \"syspurpose\": ${PURPOSE} } }"
     else
-            OSTATUS=$(echo ${STATUS} | grep "Overall Status:" | awk '{print $2}')
+            OSTATUS=$(echo ${STATUS} | grep "Overall Status:" | awk '{print $3}')
             echo "{\"rhel_sub_info\": { \"status\": \"${OSTATUS}\", \"info\": \"${STATUS}\", \"syspurpose\": ${PURPOSE} } }"
     fi
     IFS=$OIFS
