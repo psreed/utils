@@ -13,6 +13,7 @@ class utils::rhel_subscribe {
     and $facts['rhel_sub_info']!=undef
     and $facts['rhel_sub_info']['status']!=undef
     and $facts['rhel_sub_info']['status']!='Subscribed'
+    and $facts['rhel_sub_info']['status']!='Registered'
     and $facts['rhel_sub_info']['status']!=''
   ) {
     $rhel_user=lookup('rhel_subscription::user', undef, undef, '')
